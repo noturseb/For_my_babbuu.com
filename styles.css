@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f8bbd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .message h1 {
+    font-size: 3rem;
+    color: #d81b60;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .flowers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .flower {
+    width: 50px;
+    height: 50px;
+    background-color: #f50057;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    animation: flowerAnimation 2s infinite;
+  }
+  
+  .flower:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .flower:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .flower:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .hearts {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .heart {
+    width: 40px;
+    height: 40px;
+    background-color: #f44336;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 75%, 25% 100%, 0% 35%);
+    margin: 10px;
+    animation: heartAnimation 2s ease-in-out infinite;
+  }
+  
+  .heart:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .heart:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .heart:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .buttons {
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #f50057;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  button:hover {
+    background-color: #d81b60;
+  }
+  
+  #response {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #e91e63;
+    font-weight: bold;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes flowerAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes heartAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
